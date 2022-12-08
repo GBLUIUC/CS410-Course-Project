@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <title>LiveDataLab</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <h2>Add React in One Minute</h2>
+    <p>This page demonstrates using React with no build tooling.</p>
+    <p>React is loaded as a script tag.</p>
+    
+    <!-- We will put our React component inside this div. -->
+    <div id="like_button_container"></div>
+
+    <!-- <table>
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+    </table> -->
+
+    <div>
+      <h5>Leaderboard ID: {this.state.leaderboardId}</h5>
+      <table className="table is-fullwidth">
+          <thead>
+              <tr>
+                  <th>Rank</th>
+                  <th>Username</th>
+                  <th>Submission Number</th>
+                  {this.state.columnNames.map(col => {
+                      return <th>{col}</th>
+                  })}
+              </tr>
+          </thead>
+          <!-- <tbody>
+              {this.state.rows.map(row => {
+                  return (
+                      <tr>
+                          <th>{row.rank}</th>
+                          <th>{row.username}</th>
+                          <th>{row.submission_number}</th>
+                          {row.data.map(field => {
+                              return <td>{field}</td>
+                          })}
+                      </tr>
+                  )
+              })}
+          </tbody> -->
+      </table>
+  </div>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script src="like_button.js"></script>
+    <!-- <script src="test.js"></script>  -->
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    </body>
+</html>
